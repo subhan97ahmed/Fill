@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/level 1.unity
+    guid: b7e3b87dd91bc5447b4661bb7046064d
+  - enabled: 1
     path: Assets/Scenes/liquid_sim.unity
     guid: a7691b8692643cd4b80268668a3a487f
   m_configObjects: {}

@@ -135,6 +135,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   or: 0
+  x: 
+  y: 
+  sounds: []
 --- !u!114 &2696394998512312051
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gravity_Change : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class Gravity_Change : MonoBehaviour
         y =Input.acceleration.y.ToString();
         float x_axis =Input.acceleration.x;
         float y_axis = Input.acceleration.y;
+        // for restarting 
+        if(Input.GetKey(KeyCode.R)){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
          if(Input.GetKey(KeyCode.W)){
             Physics2D.gravity =new Vector2(0,9.8f);
             playWaterSound();

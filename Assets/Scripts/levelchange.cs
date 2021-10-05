@@ -9,6 +9,7 @@ public class levelchange : MonoBehaviour
     public int number_of_particle_required =14;
     public int number_of_particle_entered=0;
     public AudioSource audioSource;
+    public int levelIndex=1;
     void Start()
     {
         
@@ -27,7 +28,7 @@ public class levelchange : MonoBehaviour
         audioSource.Play();
         }
         if(number_of_particle_required<number_of_particle_entered){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +levelIndex);
             Time.timeScale = 1;
         }
         

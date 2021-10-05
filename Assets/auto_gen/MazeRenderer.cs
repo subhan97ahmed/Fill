@@ -53,14 +53,14 @@ public class MazeRenderer : MonoBehaviour
                 {
                     var topWall = Instantiate(wallPrefab, transform) as Transform;
                     topWall.position = position + new Vector2(0, size / 2);
-                    topWall.localScale = new Vector2( topWall.localScale.x, topWall.localScale.y);
+                    topWall.localScale = new Vector2( topWall.localScale.x*size, topWall.localScale.y*size);
                 }
 
                 if (cell.HasFlag(WallState.LEFT))
                 {
                     var leftWall = Instantiate(wallPrefab, transform) as Transform;
                     leftWall.position = position + new Vector2(-size / 2,  0);
-                    leftWall.localScale = new Vector2( leftWall.localScale.x, leftWall.localScale.y);
+                    leftWall.localScale = new Vector2( leftWall.localScale.x*size, leftWall.localScale.y*size);
                     leftWall.eulerAngles = new Vector3(0, 0, 0);
                 }
 
@@ -70,7 +70,7 @@ public class MazeRenderer : MonoBehaviour
                     {
                         var rightWall = Instantiate(wallPrefab, transform) as Transform;
                         rightWall.position = position + new Vector2(+size / 2,  0);
-                        rightWall.localScale = new Vector2( rightWall.localScale.x, rightWall.localScale.y);
+                        rightWall.localScale = new Vector2( rightWall.localScale.x*size, rightWall.localScale.y*size);
                         rightWall.eulerAngles = new Vector3(0,0 , 0);
                     }
                 }
@@ -81,7 +81,7 @@ public class MazeRenderer : MonoBehaviour
                     {
                         var bottomWall = Instantiate(wallPrefab, transform) as Transform;
                         bottomWall.position = position + new Vector2(0,  -size / 2);
-                        bottomWall.localScale = new Vector2( bottomWall.localScale.x, bottomWall.localScale.y);
+                        bottomWall.localScale = new Vector2( bottomWall.localScale.x*size, bottomWall.localScale.y*size);
                     }
                 }
             }

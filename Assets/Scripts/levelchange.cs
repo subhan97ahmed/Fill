@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,16 +10,7 @@ public class levelchange : MonoBehaviour
     public int number_of_particle_entered=0;
     public AudioSource audioSource;
     public int levelIndex=1;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Particle")){
@@ -28,7 +19,8 @@ public class levelchange : MonoBehaviour
         audioSource.Play();
         }
         if(number_of_particle_required<number_of_particle_entered){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +levelIndex);
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +levelIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Time.timeScale = 1;
         }
         

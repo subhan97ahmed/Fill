@@ -28,6 +28,8 @@ public class MazeRenderer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        width =Screen.width;
+        height = Screen.height;
         if (mazeSeed==0)
         {
             mazeSeed =Random.Range(0,10000);
